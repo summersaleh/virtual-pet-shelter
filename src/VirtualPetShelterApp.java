@@ -83,7 +83,7 @@ public class VirtualPetShelterApp {
 		}
 		
 		
-		} while(input.equals("quit"));
+		} while(!input.equals("quit"));
 
 	}
 
