@@ -8,16 +8,16 @@ public class VirtualPetShelterApp {
 		VirtualPetShelter summerShelter = new VirtualPetShelter();
 
 		VirtualPet tuck = new VirtualPet("Tuck", 10, 10, 10);
-		tuck.giveDescription(": gets her name from her snowy white fur!\n");
+		tuck.giveDescription("gets her name from her snowy white fur!");
 
 		VirtualPet lump = new VirtualPet("Lump", 20, 20, 30);
-		lump.giveDescription(": loves to eat eat eat! Very high energy but super sweet!\n");
+		lump.giveDescription("loves to eat eat eat! Very high energy but super sweet!");
 
 		VirtualPet bugs = new VirtualPet("Bugs", 20, 20, 30);
-		bugs.giveDescription(": mischevious! Very curious always looking for an andventure.\n");
+		bugs.giveDescription("mischevious! Very curious always looking for an andventure.");
 
 		VirtualPet hope = new VirtualPet("Hope", 15, 15, 10);
-		hope.giveDescription(": the oldest from the bunch. Sweet, quiet, and loves to lounge.\n");
+		hope.giveDescription("the oldest from the bunch. Sweet, quiet, and loves to lounge.");
 
 		summerShelter.intakeNewPet(tuck);
 		summerShelter.intakeNewPet(lump);
@@ -36,7 +36,7 @@ public class VirtualPetShelterApp {
 
 			System.out.println(summerShelter.getMainMenu());
 
-			String choice = input.next();
+			String choice = input.nextLine();
 			checkForQuit(choice);
 
 			switch (choice.toLowerCase()) {
@@ -55,7 +55,7 @@ public class VirtualPetShelterApp {
 			case "3":
 				System.out.println("Which dog would you like to play with:");
 				System.out.println(summerShelter.dogChoices());
-				String playChoice = input.next().toString().toLowerCase();
+				String playChoice = input.nextLine().toString().toLowerCase();
 				checkForQuit(playChoice);
 				summerShelter.playWithDog(playChoice);
 				System.out.println("Thank for playing with " + playChoice + "\n");
@@ -64,7 +64,7 @@ public class VirtualPetShelterApp {
 			case "4":
 				System.out.println(summerShelter.dogChoices());
 				System.out.println("Which dog did you want to adpot?");
-				String dogChoice = input.next();
+				String dogChoice = input.nextLine();
 				checkForQuit(dogChoice);
 				summerShelter.removePet(dogChoice.toLowerCase());
 				System.out
@@ -73,10 +73,10 @@ public class VirtualPetShelterApp {
 
 			case "5":
 				System.out.println("What is the name of the dog you are donating?");
-				String donatedDog = input.next();
+				String donatedDog = input.nextLine();
 				checkForQuit(donatedDog);
 				System.out.println("Give us a description of the dog");
-				String donatedDescription = input.next();
+				String donatedDescription = input.nextLine(); 
 				VirtualPet newDonatedDog = new VirtualPet(donatedDog, donatedDescription);
 				summerShelter.intakeNewPet(newDonatedDog);
 				System.out.println("We will make sure this little pup finds a new loving home!");

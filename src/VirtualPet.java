@@ -81,7 +81,7 @@ public class VirtualPet {
 
 	@Override
 	public String toString() {
-		return name + description;
+		return "\n" + name +": "+ description + "\n";
 	}
 
 }
